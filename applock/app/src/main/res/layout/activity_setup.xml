@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0A0A0F">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Setup AppLock" android:textColor="#A78BFA" android:textSize="26sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose your lock method and recovery options" android:textColor="#64748B" android:textSize="13sp" android:layout_marginBottom="28dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOCK TYPE" android:textColor="#64748B" android:textSize="11sp" android:layout_marginBottom="10dp"/>
+        <RadioGroup android:id="@+id/rg_lock_type" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="24dp">
+            <RadioButton android:id="@+id/rb_pin" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="PIN" android:textColor="#E2E8F0" android:buttonTint="#7C6AF7" android:checked="true"/>
+            <RadioButton android:id="@+id/rb_password" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Password" android:textColor="#E2E8F0" android:buttonTint="#7C6AF7"/>
+            <RadioButton android:id="@+id/rb_pattern" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pattern" android:textColor="#E2E8F0" android:buttonTint="#7C6AF7"/>
+        </RadioGroup>
+        <LinearLayout android:id="@+id/layout_pin" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <EditText android:id="@+id/et_pin" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter PIN (min 4 digits)" android:inputType="numberPassword" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="12dp"/>
+            <EditText android:id="@+id/et_pin_confirm" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Confirm PIN" android:inputType="numberPassword" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_password" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <EditText android:id="@+id/et_password" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter Password (min 6 chars)" android:inputType="textPassword" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="12dp"/>
+            <EditText android:id="@+id/et_password_confirm" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Confirm Password" android:inputType="textPassword" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_pattern" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:visibility="gone">
+            <TextView android:id="@+id/tv_pattern_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Draw your unlock pattern" android:textColor="#A78BFA" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+            <com.ammaryasir.applock.helpers.PatternView android:id="@+id/pattern_view" android:layout_width="250dp" android:layout_height="250dp" android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RECOVERY OPTIONS" android:textColor="#64748B" android:textSize="11sp" android:layout_marginBottom="10dp"/>
+        <EditText android:id="@+id/et_recovery_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Recovery Email" android:inputType="textEmailAddress" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/et_recovery_answer" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Security Answer (e.g. mother name)" android:inputType="text" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="28dp"/>
+        <Button android:id="@+id/btn_save_setup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SAVE AND CONTINUE" android:backgroundTint="#7C6AF7" android:textColor="#FFFFFF" android:textStyle="bold" android:padding="16dp"/>
+    </LinearLayout>
+</ScrollView>

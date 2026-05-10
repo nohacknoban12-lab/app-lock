@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center" android:background="#0A0A0F" android:padding="28dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ðŸ”‘" android:textSize="52sp" android:layout_marginBottom="12dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Account Recovery" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tv_recovery_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#64748B" android:textSize="13sp" android:gravity="center" android:layout_marginBottom="28dp"/>
+    <EditText android:id="@+id/et_rec_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter your recovery email" android:inputType="textEmailAddress" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="12dp"/>
+    <EditText android:id="@+id/et_rec_answer" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter security answer" android:inputType="text" android:textColor="#E2E8F0" android:textColorHint="#64748B" android:background="@drawable/input_bg" android:padding="14dp" android:layout_marginBottom="24dp"/>
+    <Button android:id="@+id/btn_verify_recovery" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="VERIFY AND RESET" android:backgroundTint="#7C6AF7" android:textColor="#FFFFFF" android:textStyle="bold" android:padding="14dp"/>
+</LinearLayout>
